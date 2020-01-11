@@ -1,0 +1,19 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+html {
+    // This defines what 1rem is (10px in this case)
+    // font-size: 62.5%;
+}
+
+
+
