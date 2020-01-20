@@ -1,0 +1,42 @@
+nav {
+	margin: 0;
+	padding: 0 !important;
+	min-height: 65px !important;
+	height: 10% !important;
+}
+
+
+nav li {
+	margin-right: 10%;
+}
+
+nav button {
+	margin: 0;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#navbarToggleExternalContent a{
+	text-decoration: none;
+	color: black;
+}
+
+#navbarToggleExternalContent ul {
+	margin-left: 10px;
+}
+
+
+
+
+@media (min-width: 1px) and (max-width: 400px) {
+	nav img {
+		height: 20px;
+		width: 20px;
+	}
+	nav a {
+		font-size: 5vw !important;
+		align-self: center;
+	}
+
+}

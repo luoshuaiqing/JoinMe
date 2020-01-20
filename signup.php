@@ -213,7 +213,7 @@ session_start();
 	<h1>What is your Company's Slogan?</h1>
 	<input class="form-control" type="text" id="employer_company_slogan">
 	<h1>What is your Company's Website?</h1>
-	<input class="form-control" type="text" id="employer_company_website" required>
+	<input class="form-control" type="text" id="employer_company_website" value="www.google.com" required>
 	<h1>Please Enter the URL of your company logo.</h1>
 	<input type="url" class="form-control" id="inputGroupFile2" name="image_url" required>
 

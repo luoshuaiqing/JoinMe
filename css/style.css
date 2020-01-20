@@ -37,19 +37,38 @@ html, body {
   width: 100%;
   height: 100%; }
 
+.h-10 {
+  height: 10%; }
+
 .heading {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #7ed56f, #41827c);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
-  transition: all 0.2s; }
+  transition: all 0.3s; }
   .heading:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.2);
-    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+    text-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.2);
+    font-weight: 1000; }
+
+.heading--signup {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7b4397, #dc2430);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.3s; }
+  .heading--signup:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.2);
+    text-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.2);
+    font-weight: 1000; }
 
 .btn-text:link, .btn-text:visited {
   color: #55c57a;
@@ -68,6 +87,142 @@ html, body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.form {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 0;
+  padding-left: 0; }
+  .form__login {
+    position: absolute;
+    background-color: #f8f9fa;
+    width: 35%;
+    height: 70%;
+    border-radius: 25px;
+    left: 7.5%; }
+    .form__login_email {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      transition: all .3s; }
+      .form__login_email:focus {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        border-bottom: 4px solid #55c57a; }
+      .form__login_email:focus + .button__verify {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        border-bottom: 4px solid #55c57a; }
+      .form__login_email:focus:invalid {
+        border-bottom: 4px solid #ff7730; }
+      .form__login_email:focus:invalid + .button__verify {
+        border-bottom: 4px solid #ff7730; }
+      .form__login_email-label {
+        margin-left: 1rem;
+        font-size: 2rem;
+        transition: all .5s; }
+        .form__login_email-label-signup {
+          font-size: 1.2rem; }
+      .form__login_email:placeholder-shown ~ .form__login_email-label {
+        transform: translate(1px, 3rem);
+        opacity: 0; }
+  .form__signup {
+    position: absolute;
+    background-color: #f8f9fa;
+    width: 35%;
+    height: 70%;
+    border-radius: 25px;
+    left: 57.5%; }
+  .form__email {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative; }
+
+.link {
+  position: absolute;
+  top: 100%;
+  right: 0; }
+  .link--signup {
+    color: #41827c; }
+    .link--signup:hover {
+      color: #41827c; }
+  .link--login {
+    color: #7b4397; }
+    .link--login:hover {
+      color: #7b4397; }
+
+.button--submit-signup:link, .button--submit-signup:visited {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  width: 50%;
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  color: #f8f9fa;
+  background-color: #AC3464;
+  border-radius: 5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #7b4397 50%);
+  background-size: 250%;
+  transition: all .4s;
+  background-position: 0; }
+
+.button--submit-signup:hover {
+  background-position: 100%;
+  color: white;
+  transform: translateY(-1rem); }
+
+.button--submit-signup:active {
+  background-position: 100%;
+  color: white;
+  transform: translateY(-0.5rem); }
+
+.button--submit:link, .button--submit:visited {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7rem;
+  width: 50%;
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  color: #f8f9fa;
+  background-color: #55c57a;
+  border-radius: 5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #41827c 50%);
+  background-size: 250%;
+  transition: all .4s;
+  background-position: 0; }
+
+.button--submit:hover {
+  background-position: 100%;
+  color: white;
+  transform: translateY(-1rem); }
+
+.button--submit:active {
+  background-position: 100%;
+  color: white;
+  transform: translateY(-0.5rem); }
+
+.error {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: red;
+  margin-left: 1rem;
+  display: none; }
 
 nav {
   margin: 0;
@@ -99,18 +254,6 @@ nav button {
     font-size: 5vw !important;
     align-self: center; } }
 
-.form {
-  width: 100%;
-  height: 90%;
-  min-height: 900px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .form--login {
-    background-color: #f8f9fa;
-    width: 50%;
-    height: 70%; }
-
 .bg-video {
   position: absolute;
   top: 0;
@@ -127,3 +270,88 @@ nav button {
 
 .align-center {
   text-align: center; }
+
+.button__verify {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all .3s;
+  cursor: pointer;
+  color: white !important;
+  background-color: #AC3464;
+  display: block; }
+  .button__verify:hover {
+    cursor: pointer; }
+  .button__verify::before, .button__verify::after {
+    position: absolute;
+    content: '';
+    top: -20px;
+    right: -20px;
+    left: -20px;
+    bottom: -20px; }
+
+@media screen and (max-width: 1600px) {
+  .button--submit:link, .button--submit:visited {
+    margin-top: 5rem; }
+  .label--signup {
+    font-size: 1.5rem; }
+  .link {
+    margin-top: 1rem; }
+  #div_1, #div_3 {
+    margin-top: .3rem !important; }
+  #div_2 {
+    margin-top: .5rem !important; } }
+
+@media screen and (max-width: 1300px) {
+  .button--submit:link, .button--submit:visited, .button--submit-signup:link, .button--submit-signup:visited {
+    font-size: 1.5rem; } }
+
+@media screen and (max-width: 1024px) {
+  .heading {
+    font-size: 2.5rem; }
+  label {
+    font-size: 1.5rem !important; } }
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 1.7rem; }
+  label {
+    font-size: 1.2rem; }
+  .button--submit:link, .button--submit:visited, .button--submit-signup:link, .button--submit-signup:visited {
+    font-size: 1rem; } }
+
+@media screen and (max-height: 1000px) {
+  .heading {
+    font-size: 2.5rem; }
+  label {
+    font-size: 1.3rem !important; }
+  .button--submit:link, .button--submit:visited, .button--submit-signup:link, .button--submit-signup:visited {
+    font-size: 1.2rem; } }
+
+@media screen and (max-height: 900px) {
+  .heading {
+    font-size: 1.7rem; }
+  label {
+    font-size: 1.2rem !important; }
+  .button--submit:link, .button--submit:visited, .button--submit-signup:link, .button--submit-signup:visited {
+    font-size: 1rem; } }
+
+@media screen and (max-height: 750px) {
+  .heading {
+    font-size: 1.3rem; }
+  label {
+    font-size: 1rem !important; }
+  .button--submit:link, .button--submit:visited, .button--submit-signup:link, .button--submit-signup:visited {
+    font-size: .8rem; }
+  .form__login_email {
+    height: 2rem; } }
+
+@media screen and (max-height: 615px) {
+  html {
+    font-size: 80%; } }

@@ -32,8 +32,8 @@ if (isset($_SESSION["user_id"])) {
 	<!-- loading font -->
 	<?php require 'components/fonts.php'; ?>
 
-
-
+	<!-- sending email -->
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 
 </head>
@@ -89,15 +89,62 @@ if (isset($_SESSION["user_id"])) {
 			</video>
 		</div>
 
-		<form class="form--login" action="job_search.php" method="POST" id="login_form" onsubmit="return login_submit();">
-			<h3 class="heading align-center w-100 mt-3">
+		<form class="form__login" action="job_search.php" method="POST" id="login_form" name="login_form">
+			<div class="row h-10">
+
+			</div>
+			<h3 class="heading align-center w-100 font-Baskervville">
 				Account Login
 			</h3>
-			<div class=""></div>
+
+			<div class="form-group w-75 form__email mt-4">
+				<input type="email" class="form-control form-control-lg form__login_email" id="email" placeholder="Email Address" required>
+				<label for="email" class="font-Baskervville form__login_email-label">Email Address</label>
+			</div>
+
+			<div class="form-group w-75 form__email mt-4">
+				<input type="password" class="form-control form-control-lg form__login_email" id="password" placeholder="Password" required>
+				<label for="password" class="font-Baskervville form__login_email-label">Password </label>
+				<a class="link link--login" href="#">Sign Up?</a>
+				<span class="error" id="login__error">Please enter the correct email and password</span>
+
+			</div>
+
+			<a href="#" class="button--submit" onclick="login();">Login</a>
+
 		</form>
 
-		<form class="form--signup" action="signup.php" method="POST" id="signup_form" style="display: none;" onsubmit="return signup_submit();">
+		<form class="form__signup" action="signup.php" method="POST" id="signup_form" style="display: none;" name="signup_form">
+			<div class="row h-10">
 
+			</div>
+			<h3 class="heading heading--signup align-center w-100 font-Baskervville">
+				Account Signup
+			</h3>
+
+			<div class="form-group w-75 form__email mt-4" id="div_1">
+				<input type="email" class="form-control form-control-lg form__login_email" id="email_2" placeholder="Email Address" required>
+				<label for="email_2" class="font-Baskervville form__login_email-label label--signup">Email Address</label>
+			</div>
+
+			<div class="form-group w-75 form__email mt-4" id="div_2">
+				<input type="password" class="form-control form-control-lg form__login_email" id="password_2" placeholder="Password" required>
+				<label for="password_2" class="font-Baskervville form__login_email-label label--signup">Password</label>
+
+			</div>
+
+			<div class="form-group w-75 form__email mt-4" id="div_3">
+				<input type="text" class="form-control form-control-lg form__login_email" id="code" placeholder="Verification Code" value="joinmenow" required>
+				<span class="button__verify">send</span>
+				<label for="code" class="font-Baskervville form__login_email-label label--signup">Verification Code</label>
+				<a class="link link--signup" href="#">Log In?</a>
+				<span class="error" id="signup__error">Please check the email and verification code you entered</span>
+
+			</div>
+
+
+
+			<a href="#" class="button--submit-signup" onclick="signup();">Sign up</a>
 		</form>
 
 
@@ -142,6 +189,10 @@ if (isset($_SESSION["user_id"])) {
 			});
 		});
 
+		console.log($("video")[0].playbackRate);
+		$("video")[0].playbackRate = 0.5;
+
+
 		let login_showed = true;
 		$('.link').click(() => {
 			if (login_showed) {
@@ -156,11 +207,6 @@ if (isset($_SESSION["user_id"])) {
 
 
 		function signup_submit() {
-			if ($("#password_2").val() != $("#password_3").val()) {
-				alert("wrong user input!");
-				return false;
-			}
-
 			var xhr = new XMLHttpRequest();
 			xhr.open('POST', "backend/signup_backend.php", false);
 			xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -185,11 +231,79 @@ if (isset($_SESSION["user_id"])) {
 
 			if (xhr.responseText != null && xhr.responseText != "success") {
 				console.log(xhr.responseText);
-				alert("The email is or password is not correct.");
+				console.log("The email or password is not correct.");
 				return false;
 			}
 			return true;
 		}
+
+		function login() {
+			// check if the input is empty
+			if (!$("#email").val() || !$("#password").val()) {
+				console.log("Empty input");
+				$("#login__error").css("display", "block");
+				return false;
+			}
+
+			if (login_submit()) {
+				document.login_form.submit();
+			} else {
+				$("#login__error").css("display", "block");
+			}
+		}
+
+		function signup() {
+			console.log($("#code").val() + ", " + $("#email_2").val() + ", " + $("#password_2").val());
+			// check if the input is empty
+			if (!$("#email_2").val() || !$("#password_2").val() || !$("#code").val()) {
+				console.log("Empty input");
+				$("#signup__error").css("display", "block");
+				return false;
+			}
+			console.log("code: " + code);
+			console.log($("#code").val() == code);
+			if($("#code").val() != code) {
+				console.log("wrong verification code");
+				$("#signup__error").css("display", "block");
+				return false;
+			}
+
+			if (signup_submit()) {
+				document.signup_form.submit();
+			} else {
+				$("#signup__error").css("display", "block");
+			}
+		}
+
+		$("#password").focus(function() {
+			$("#login__error").css("display", "none");
+		});
+
+		$("#password_2").focus(function() {
+			$("#signup__error").css("display", "none");
+		});
+		$("#code").focus(function() {
+			$("#signup__error").css("display", "none");
+		});
+
+		let code = "initialized code";
+		$(".button__verify").click(function() {
+			alert("Please check your email to see the verification code");
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', "backend/email.php", false);
+			xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			xhr.send("code=joinmenow&email=" + $("#email_2").val());
+
+
+			if (xhr.responseText != null && xhr.responseText == "success") {
+				console.log(xhr.responseText);
+				code = "joinmenow";
+			}
+			else {
+				alert("something goes wrong with the code");
+			}
+			
+		});
 	</script>
 </body>
 

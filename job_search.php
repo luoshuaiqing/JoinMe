@@ -134,7 +134,7 @@ session_start();
 			</div>
 			<div class="col-md-8 col-12 right_col">
 				<div class="job_detail_box" id="job_detail_box">
-					<h3 style="text-align: center;">Please choose a job on the left to show job detail.</h3>
+					<!-- <h3 style="text-align: center;">Please choose a job on the left to show job detail.</h3> -->
 					<!-- <div class="job_title_2">
 						<span class="font-IBM"><img alt="xxx" class="logo_2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmxScH-JaDVF6ZNAloBdqD5q2YcJ79-vrS09QU8EA3Xe58Tart">&nbsp;<span class="text_center">Software Engineer</span></span>
 					</div>
@@ -312,8 +312,9 @@ session_start();
 				}			
 				
 				console.log(results);
-
+				var first_one = true;
 				results.forEach((result) => {
+					
 					let job_title = result.job_title;
 					let company_description = result.company_description;
 					let city = result.city;
@@ -329,6 +330,13 @@ session_start();
 					console.log("image_url: " + image_url);
 					
 					resultsList.append('<div class="job_box" id="_' + job_id + '"><span class="job_title font-IBM "><img class="logo" alt="xxx" src="' + image_url + '">&nbsp;<span class="clickable text_center text-capitalize" onclick="show_detail(this);">' + job_title + '</span></span><i class="far fa-star fa-lg fav" onclick="toggle_fav(this);"></i><p class="font-Ubuntu"><i class="far fa-building"></i>&nbsp;<span class="text-capitalize company_name_class">' + company_name + '</span><i class="fas fa-map-marker-alt location_icon"></i>&nbsp;<span class="text-capitalize">' + city + '</span>, <span class="text-capitalize">' + state + '</span></p><p class="description font-Cantarell"><span>' + job_description + '</span></p></div>');
+
+					if(first_one) {
+						// alert("here");
+						show_detail($(".clickable")[0]);
+						// alert("here 2");
+						first_one = false;
+					}
 				});
 
 			});

@@ -4,16 +4,46 @@
     font-weight: 700;
 
     // give text some color
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-image: linear-gradient(to right, $color-primary-light, #41827c);
+
     display: inline-block;
     -webkit-background-clip: text;
     color: transparent;
 
     letter-spacing: 2px;
-    transition: all 0.2s;
+    transition: all 0.3s;
 
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.2);
-        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+        text-shadow: 1rem 2rem 4rem rgba($color-black, .2);
+        font-weight: 1000;
     }
+
+
 }
+
+.heading--signup {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    // give text some color
+    background-image: linear-gradient(to right, #7b4397, #dc2430);
+    // background-image: linear-gradient(to right, black, grey, black);
+
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    letter-spacing: 2px;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.2);
+        text-shadow: 1rem 2rem 4rem rgba($color-black, .2);
+        font-weight: 1000;
+    }
+
+
+}
+

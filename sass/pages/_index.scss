@@ -1,31 +1,3 @@
-
-
-.form {
-	// background-image: url("../assets/index.jpg");
-	// background-repeat: no-repeat;
-	// background-size: cover;
-    // background-position: 35% 0;
-    
-	width: 100%;
-	height: 90%;
-    min-height: 900px;
-
-    // center the element
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    
-
-    &--login {
-        background-color: rgba($color-white, 1);
-        width: 50%;
-        height: 70%;
-        
-    }
-}
-
-
 .bg-video {
     position: absolute;
     top: 0;
@@ -46,4 +18,168 @@
 
 .align-center {
     text-align: center;
+}
+
+.button__verify {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-transform: uppercase;
+
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    transition: all .3s;
+    cursor: pointer;
+
+    color: white !important;
+    background-color: #AC3464;
+
+    display: block;
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::before, &::after{
+        position:absolute;
+        content:'';
+        top:-20px;
+        right:-20px;
+        left:-20px;
+        bottom:-20px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+
+    .button--submit {
+        &:link, 
+        &:visited {
+            margin-top: 5rem;
+        }
+    }
+
+    .label--signup {
+        font-size: 1.5rem;
+    }
+    .link {
+        margin-top: 1rem;
+    }
+
+    #div_1, #div_3 {
+        margin-top: .3rem !important;
+    }
+
+    #div_2 {
+        margin-top: .5rem !important;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    .button--submit, .button--submit-signup {
+        &:link, 
+        &:visited {
+            font-size: 1.5rem;
+        }
+        
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    label {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 1.7rem;
+    }
+
+    label {
+        font-size: 1.2rem;;
+    }
+
+    .button--submit, .button--submit-signup {
+        &:link, 
+        &:visited {
+            font-size: 1rem;
+        }
+        
+    }
+}
+
+@media screen and (max-height: 1000px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    label {
+        font-size: 1.3rem !important;
+    }
+
+    .button--submit, .button--submit-signup {
+        &:link, 
+        &:visited {
+            font-size: 1.2rem;
+        }
+        
+    }
+
+}
+
+@media screen and (max-height: 900px) {
+    .heading {
+        font-size: 1.7rem;
+    }
+
+    label {
+        font-size: 1.2rem !important;
+    }
+
+    .button--submit, .button--submit-signup {
+        &:link, 
+        &:visited {
+            font-size: 1rem;
+        }
+        
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .heading {
+        font-size: 1.3rem;
+    }
+
+    label {
+        font-size: 1rem !important;
+    }
+
+    .button--submit, .button--submit-signup {
+        &:link, 
+        &:visited {
+            font-size: .8rem;
+        }
+    }
+
+    .form__login_email {
+        height: 2rem;
+    }
+
+}
+
+@media screen and (max-height: 615px) {
+    html {
+        font-size: 80%;
+    }
 }
