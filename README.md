@@ -4,7 +4,7 @@ This is an Employment Marketplace for Job Seekers and Employers that supports di
 * chatting
 * email verification
 * autocomplete
-* login/signup
+* login / signup
 * keyword searching
 * page transition effect 
 ## Key technologies:
@@ -19,7 +19,7 @@ This is an Employment Marketplace for Job Seekers and Employers that supports di
 * CSS
 * HTML5
 
-Please checkout *screenshots* folder and *www.joinme.us* for more details.
+Please checkout [JoinMe](screenshots) folder and *www.joinme.us* for more details.
 
 Author: **Shuaiqing Luo**
 
