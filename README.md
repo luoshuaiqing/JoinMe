@@ -42,6 +42,7 @@ Two ways to explore my project:<br/>
       * google2@gmail.com
       * apple@gmail.com
       * google@gmail.com
+    * The password is *123* for all users
 2. Sign Up
     * Please use the following accounts as *normal users* to search job and talk with employers
       * employee@gmail.com
@@ -54,7 +55,7 @@ Two ways to explore my project:<br/>
 <br/>
 Please checkout *www.joinme.us* for more details. (This project is better supported in **Google Chrome**)
 
-<br/>
+<br/> <br/><br/>
 Author: **Shuaiqing Luo**
 
 
