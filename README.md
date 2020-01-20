@@ -19,10 +19,20 @@ This is an Employment Marketplace for Job Seekers and Employers that supports di
 * CSS
 * HTML5
 
-The following screenshots are some of the pages 
-![alt test](screenshots/index.png)
+The following screenshots are some of the pages:
 
-Please checkout [ScreenShots](screenshots) folder and *www.joinme.us* for more details.
+![index](screenshots/index.png)
+
+![signup](screenshots/signup.png)
+
+![job search](screenshots/job_search.png)
+
+![post job](screenshots/post_job.png)
+
+![chatting](screenshots/chatting.png)
+(The photos can also be seen in [ScreenShots](screenshots) folder.
+
+Please checkout *www.joinme.us* for more details.
 
 Please use the following accounts to test my project or feel free to sign up yourself. (The verification code is joinmeus and is already prefilled in the signup page)
 
