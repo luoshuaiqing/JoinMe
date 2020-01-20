@@ -30,11 +30,17 @@ The following screenshots are some of the pages:
 ![post job](screenshots/post_job.png)
 
 ![chatting](screenshots/chatting.png)
-(The photos can also be seen in [ScreenShots](screenshots) folder.
+                    (The photos can also be seen in [ScreenShots](screenshots) folder)
+                    
+                    
+## About the website ##
+Please use the following ways to test my project:
+
+accounts to test my project or feel free to sign up yourself. (The verification code is joinmeus and is already prefilled in the signup page)
 
 Please checkout *www.joinme.us* for more details.
 
-Please use the following accounts to test my project or feel free to sign up yourself. (The verification code is joinmeus and is already prefilled in the signup page)
+
 
 For signup page, I have already prefilled in some information to save you some time. Whatever information I didnot fill in is expected to really show up on some pages, so please fill them up yourself.
 
