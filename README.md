@@ -35,7 +35,7 @@ This is an Employment Marketplace for Job Seekers and Employers that supports di
                     
                     
 ## About the website ##
-Please use the following ways to test my project:
+Two ways to explore my project:<br/>
 1 . Login
   * Please use the following accounts as *employers* to use post job functionality
     * . amazon@google.com
