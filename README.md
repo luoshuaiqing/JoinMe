@@ -34,7 +34,7 @@ This is an Employment Marketplace for Job Seekers and Employers that supports di
                     (The photos can also be seen in [ScreenShots](screenshots) folder)
                     
                     
-## About the website ##
+## About the website (www.joinme.us) ##
 Two ways to explore my project:<br/>
 1. Login
     * Please use the following accounts as *employers* to use post job functionality
