@@ -53,8 +53,8 @@ if( !$results) {
 }
 
 if($results->num_rows == 0) {
-	$_SESSION["isEmployer"] = false;
+	$_SESSION["isEmployer"] = true;
 }
 else {
-	$_SESSION["isEmployer"] = true;	
+	$_SESSION["isEmployer"] = false;	
 }
