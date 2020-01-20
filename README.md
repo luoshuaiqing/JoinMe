@@ -42,7 +42,7 @@ Two ways to explore my project:<br/>
     * google2@gmail.com
     * apple@gmail.com
     * google@gmail.com
-2 . Sign Up
+2. Sign Up
   * . Please use the following accounts as *normal users* to search job and talk with employers
     * . employee@gmail.com
     * . sylviawei0923@gmail.com
