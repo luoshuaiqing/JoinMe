@@ -19,12 +19,8 @@ This is an Employment Marketplace for Job Seekers and Employers that supports di
 * CSS
 * HTML5
 
+Please checkout *screenshots* folder and *www.joinme.us* for more details.
 
-
-
-
-
-
-
+Author: **Shuaiqing Luo**
 
 
