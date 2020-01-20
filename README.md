@@ -45,15 +45,15 @@ Two ways to explore my project:<br/>
     * Please use the following accounts as *normal users* to search job and talk with employers
       * employee@gmail.com
       * sylviawei0923@gmail.com
-    * The password is *123* for all users
+    * The **password** is *123* for all users
 2. Sign Up
-    * The verification code is joinmeus and is already prefilled in the signup form. However, you can still test the email verification functionality by entering a valid email account. Your email will receive the verification code within 30 seconds, which is "joinmeus" for easier testing reasons.<br/>
+    * The **verification code** is *joinmeus* and is already prefilled in the signup form. However, you can still test the email verification functionality by entering a valid email account. Your email will receive the verification code within 30 seconds, which is "joinmeus" for easier testing reasons.<br/>
     * For signup page, I have already prefilled in some information to save you some time. Whatever information I didnot fill in is expected to really show up on some of the pages, so please fill them up yourself to gain a better visual effect. 
       * The only exception is the image url, which will also show up in the chatting room as your profile picture. However, I have also prefilled the image url for you to save the time of finding an image online. If you want to have a unique image, please use the image url of the format "https://xxx/xxx"
     
 
 <br/>
-Please checkout *www.joinme.us* for more details. (This project is better supported in **Google Chrome**)
+Please checkout www.joinme.us for more details. (This project is better supported in **Google Chrome**)
 
 <br/> <br/><br/>
 Author: **Shuaiqing Luo**
