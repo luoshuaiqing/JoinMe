@@ -36,12 +36,12 @@ This is an Employment Marketplace for Job Seekers and Employers that supports di
                     
 ## About the website ##
 Two ways to explore my project:<br/>
-1 . Login
+1. Login
   * Please use the following accounts as *employers* to use post job functionality
-    * . amazon@google.com
-    * . google2@gmail.com
-    * . apple@gmail.com
-    * . google@gmail.com
+    * amazon@google.com
+    * google2@gmail.com
+    * apple@gmail.com
+    * google@gmail.com
 2 . Sign Up
   * . Please use the following accounts as *normal users* to search job and talk with employers
     * . employee@gmail.com
