@@ -53,7 +53,8 @@ Two ways to explore my project:<br/>
     
 
 <br/>
-Please checkout www.joinme.us for more details. (This project is better supported in **Google Chrome**)
+This project is better supported in **Google Chrome**
+Please checkout www.joinme.us for more details. 
 
 <br/> <br/><br/>
 Author: **Shuaiqing Luo**
