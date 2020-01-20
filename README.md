@@ -21,8 +21,7 @@ This is an Employment Marketplace for Job Seekers and Employers that supports di
 * CSS
 * HTML5
 
-The following screenshots are some of the pages:
-
+## Screenshots:
 ![index](screenshots/index.png)
 
 ![signup](screenshots/signup.png)
@@ -37,13 +36,13 @@ The following screenshots are some of the pages:
                     
 ## About the website ##
 Please use the following ways to test my project:
-1.Login
+1 . Login
   * Please use the following accounts as *employers* to use post job functionality
     * . amazon@google.com
     * . google2@gmail.com
     * . apple@gmail.com
     * . google@gmail.com
-2.Sign Up
+2 . Sign Up
   * . Please use the following accounts as *normal users* to search job and talk with employers
     * . employee@gmail.com
     * . sylviawei0923@gmail.com
