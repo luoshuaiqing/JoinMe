@@ -19,7 +19,7 @@ This is an Employment Marketplace for Job Seekers and Employers that supports di
 * CSS
 * HTML5
 
-Please checkout [JoinMe](screenshots) folder and *www.joinme.us* for more details.
+Please checkout [ScreenShots](screenshots) folder and *www.joinme.us* for more details.
 
 Author: **Shuaiqing Luo**
 
